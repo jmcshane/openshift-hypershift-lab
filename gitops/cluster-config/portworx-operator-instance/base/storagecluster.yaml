@@ -42,7 +42,7 @@ spec:
       exportMetrics: true
   env:
   - name: PX_IMAGE
-    value: pure-artifactory.dev.purestorage.com/px-docker-prod-virtual/portworx/px-base-enterprise:pool_move_job_rebase
+    value: registry.portworx.io/portworx/px-base-enterprise:pool_move_job_rebase
   - name: PX_ENABLE_CACHE_FLUSH
     value: "true"
   - name: PURE_FLASHARRAY_SAN_TYPE

@@ -3,32 +3,24 @@ data:
   versions.yaml: |
     version: 3.5.0
     components:
-      stork: pure-artifactory.dev.purestorage.com/px-docker-dev-virtual/dsahoo/stork:eep
-      autopilot: portworx/autopilot:1.3.18
-      clusterDiags: portworx/cluster-diags:3.4.2
-      csiNodeDriverRegistrar: registry.k8s.io/sig-storage/csi-node-driver-registrar:v2.15.0
-      csiProvisioner: registry.k8s.io/sig-storage/csi-provisioner:v5.3.0
-      csiResizer: registry.k8s.io/sig-storage/csi-resizer:v1.14.0
-      csiSnapshotter: registry.k8s.io/sig-storage/csi-snapshotter:v8.3.0
-      csiSnapshotController: registry.k8s.io/sig-storage/snapshot-controller:v8.3.0
-      prometheus: quay.io/prometheus/prometheus:v3.7.2
-      prometheusOperator: quay.io/prometheus-operator/prometheus-operator:v0.86.1
-      prometheusConfigReloader: quay.io/prometheus-operator/prometheus-config-reloader:v0.86.1
-      alertManager: quay.io/prometheus/alertmanager:v0.28.1
-      telemetry: portworx/ccm-go:1.4.30
-      pxLibUpdate: portworx/px-lib:pxfslibs-3.5.0.0-mver12-update
-      metricsCollector: portworx/realtime-metrics:1.0.32
-      telemetryProxy: portworx/telemetry-envoy:1.1.18
-      logUploader: portworx/log-upload:px-1.1.46
-      dynamicPlugin: portworx/portworx-dynamic-plugin:2.1.0
-      dynamicPluginProxy: nginxinc/nginx-unprivileged:alpine-slim
-      certManagerController: quay.io/jetstack/cert-manager-controller:v1.17.4
-      certManagerWebhook: quay.io/jetstack/cert-manager-webhook:v1.17.4
-      certManagerCaInjector: quay.io/jetstack/cert-manager-cainjector:v1.17.4
-      certManagerAcmeSolver: quay.io/jetstack/cert-manager-acmesolver:v1.17.4
-      kubeScheduler: registry.k8s.io/kube-scheduler-amd64:v1.30.6
-      kubeControllerManager: registry.k8s.io/kube-controller-manager-amd64:v1.30.6
-      pause: registry.k8s.io/pause:3.1
+      stork: registry.portworx.io/portworx/dsahoo/stork:eep
+      autopilot: registry.portworx.io/portworx/autopilot:1.3.18
+      clusterDiags: registry.portworx.io/portworx/cluster-diags:3.4.2
+      csiNodeDriverRegistrar: registry.portworx.io/portworx/csi-node-driver-registrar:v2.15.0
+      csiProvisioner: registry.portworx.io/portworx/csi-provisioner:v5.3.0
+      csiResizer: registry.portworx.io/portworx/csi-resizer:v1.14.0
+      csiSnapshotter: registry.portworx.io/portworx/csi-snapshotter:v8.3.0
+      csiSnapshotController: registry.portworx.io/portworx/snapshot-controller:v8.3.0
+      telemetry: registry.portworx.io/portworx/ccm-go:1.4.30
+      pxLibUpdate: registry.portworx.io/portworx/px-lib:pxfslibs-3.5.0.0-mver12-update
+      metricsCollector: registry.portworx.io/portworx/realtime-metrics:1.0.32
+      telemetryProxy: registry.portworx.io/portworx/telemetry-envoy:1.1.18
+      logUploader: registry.portworx.io/portworx/log-upload:px-1.1.46
+      dynamicPlugin: registry.portworx.io/portworx/portworx-dynamic-plugin:2.1.0
+      dynamicPluginProxy: registry.portworx.io/portworx/nginx-unprivileged:alpine-slim
+      kubeScheduler: registry.portworx.io/portworx/kube-scheduler-amd64:v1.32.2
+      kubeControllerManager: registry.portworx.io/portworx/kube-controller-manager-amd64:v1.32.2
+      pause: registry.portworx.io/portworx/pause:3.1
 kind: ConfigMap
 metadata:
   name: px-versions

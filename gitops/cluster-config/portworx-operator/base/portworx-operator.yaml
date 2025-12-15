@@ -55,7 +55,7 @@ spec:
       containers:
       - name: portworx-operator
         imagePullPolicy: Always
-        image: pure-artifactory.dev.purestorage.com/px-docker-dev-virtual/akarmarkar/px-operator:pool-failover-rbac
+        image: registry.portworx.io/portworx/akarmarkar/px-operator:pool-failover-rbac
         command:
         - /operator
         - --verbose
