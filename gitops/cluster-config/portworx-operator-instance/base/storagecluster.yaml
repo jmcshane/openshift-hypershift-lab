@@ -30,6 +30,10 @@ spec:
   runtimeOptions:
     default-io-profile: "6"
   csi:
+    kubeVirtStorageClasses:
+      pxRwxBlockKubevirt: false
+      pxRwxFileKubevirt: false
+      pxCdiScratch: true
     enabled: true
   monitoring:
     telemetry:
