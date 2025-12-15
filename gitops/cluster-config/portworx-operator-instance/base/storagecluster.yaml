@@ -30,6 +30,9 @@ spec:
     enabled: false
   runtimeOptions:
     default-io-profile: "6"
+    num_threads: "96"
+    num_io_threads: "72"
+    num_cpu_threads: "96"
   csi:
     kubeVirtStorageClasses:
       pxRwxBlockKubevirt: false
