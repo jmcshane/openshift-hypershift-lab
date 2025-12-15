@@ -1,7 +1,0 @@
-apiVersion: snapshot.storage.k8s.io/v1
-deletionPolicy: Delete
-driver: pxd.portworx.com
-kind: VolumeSnapshotClass
-metadata:
-  annotations:
-  name: px-csi-snapclass

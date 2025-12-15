@@ -5,18 +5,20 @@ metadata:
   namespace: portworx
   annotations:
     portworx.io/is-openshift: "true"
-    portworx.io/misc-args: " -T px-storev2 "
-    portworx.io/preflight-check: "true"
-    portworx.io/run-on-master: "true" # This is added to run portworx on bare metal master nodes
+    portworx.io/misc-args: " --tracefile-diskusage=10 -skip-mirrors-dnld -T px-storev2 -enable_providerv2 "
+    portworx.io/preflight-check: "skip"
+    portworx.io/run-on-master: "true"
 spec:
-  image: portworx/oci-monitor:3.3.1.1
+  image: portworx/oci-monitor:3.5.0
   imagePullPolicy: Always
   kvdb:
     internal: true
   cloudStorage:
     deviceSpecs:
-    - size=1000
-    - size=1000
+    - size=2000
+    - size=2000
+    provider: pure
+    systemMetadataDeviceSpec: size=64
   secretsProvider: k8s
   startPort: 17001
   stork:
@@ -35,6 +37,9 @@ spec:
     prometheus:
       exportMetrics: true
   env:
+  - name: PX_IMAGE
+    value: pure-artifactory.dev.purestorage.com/px-docker-prod-virtual/portworx/px-base-enterprise:pool_move_job_rebase
+  - name: PX_ENABLE_CACHE_FLUSH
+    value: "true"
   - name: PURE_FLASHARRAY_SAN_TYPE
-    # For NVMe-of/ROCE
-    value: "NVMEOF-RDMA"
+    value: FC
