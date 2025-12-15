@@ -18,8 +18,8 @@ data:
       logUploader: registry.portworx.io/portworx/log-upload:px-1.1.46
       dynamicPlugin: registry.portworx.io/portworx/portworx-dynamic-plugin:2.1.0
       dynamicPluginProxy: registry.portworx.io/portworx/nginx-unprivileged:alpine-slim
-      kubeScheduler: registry.portworx.io/portworx/kube-scheduler-amd64:v1.32.2
-      kubeControllerManager: registry.portworx.io/portworx/kube-controller-manager-amd64:v1.32.2
+      kubeScheduler: registry.portworx.io/portworx/kube-scheduler-amd64:v1.33.5
+      kubeControllerManager: registry.portworx.io/portworx/kube-controller-manager-amd64:v1.33.5
       pause: registry.portworx.io/portworx/pause:3.1
 kind: ConfigMap
 metadata:
