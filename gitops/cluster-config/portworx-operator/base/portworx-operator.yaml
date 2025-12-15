@@ -52,6 +52,8 @@ spec:
       labels:
         name: portworx-operator
     spec:
+      imagePullSecrets:
+      - pxregistry
       containers:
       - name: portworx-operator
         imagePullPolicy: Always

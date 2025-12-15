@@ -10,7 +10,8 @@ metadata:
     portworx.io/run-on-master: "true"
 spec:
   image: portworx/oci-monitor:3.5.0
-  imagePullPolicy: Always
+  imagePullPolicy: IfNotPresent
+  imagePullSecret: pxregistry
   kvdb:
     internal: true
   cloudStorage:
