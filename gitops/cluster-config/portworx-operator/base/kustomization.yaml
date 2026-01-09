@@ -3,6 +3,7 @@ kind: Kustomization
 
 resources:
   - portworx-operator.yaml
+  - px-versions.yaml
 
 labels:
   - pairs:

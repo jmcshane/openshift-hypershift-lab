@@ -26,5 +26,3 @@ spec:
       units:
       - name: multipathd.service
         enabled: true
-  kernelArguments:
-    - nvme_core.multipath=N
